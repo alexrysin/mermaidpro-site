@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Migrate from Stratus "Mermaid Diagrams" — Before It Stops Working</title>
+<meta name="description" content="The Stratus Mermaid Diagrams app for Confluence is frozen on the deprecated Connect platform. Here's how to migrate your diagrams automatically — with your page history preserved.">
+<style>
+  :root { --ink:#172B4D; --muted:#6B778C; --accent:#0C66E4; --bg:#FFFFFF; --card:#F7F8FA; --border:#DFE1E6; --warn-bg:#FFF7D6; --warn-b:#F5CD47; --warn-fg:#533F04; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#B6C2CF; --muted:#8C9BAB; --accent:#579DFF; --bg:#161A1D; --card:#22272B; --border:#38414A; --warn-bg:#332E1B; --warn-b:#533F04; --warn-fg:#F5CD47; } }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); line-height:1.7; }
+  .wrap { max-width:760px; margin:0 auto; padding:24px; }
+  nav a { color:var(--accent); text-decoration:none; font-weight:600; }
+  h1 { font-size:1.9rem; margin:24px 0 18px; letter-spacing:-.01em; line-height:1.25; }
+  h2 { font-size:1.35rem; margin:32px 0 12px; }
+  p, li { font-size:1rem; margin-bottom:10px; }
+  ol, ul { padding-left:24px; margin-bottom:14px; }
+  .warn { background:var(--warn-bg); border:1px solid var(--warn-b); color:var(--warn-fg); border-radius:8px; padding:14px 18px; margin:16px 0; font-size:.95rem; }
+  .callout { background:var(--card); border:1px solid var(--border); border-left:4px solid var(--accent); border-radius:8px; padding:14px 18px; margin:16px 0; }
+  a { color:var(--accent); }
+  .cta { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:12px 26px; border-radius:10px; margin:10px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a href="/">← Mermaid Diagrams Pro</a></nav>
+  <h1>How to Migrate from Stratus "Mermaid Diagrams" — Before It Stops Working</h1>
+
+  <p>If your Confluence site uses <strong>Mermaid Diagrams for Confluence</strong> by Stratus Add-ons, you've probably noticed the warnings: Atlassian is ending support for Connect-era apps (end of support: <strong>January 31, 2027</strong>), admins now see in-product banners flagging legacy apps, and the Stratus app itself hasn't shipped an update since September 2025.</p>
+
+  <div class="warn">Nothing dramatic happens on deprecation day — but a frozen app on an unsupported platform degrades quietly: rendering bugs go unfixed (recent reviews already report them), new Mermaid syntax never arrives, and one day a Confluence change breaks something nobody will repair.</div>
+
+  <h2>Where your diagrams actually live (good news)</h2>
+  <p>The Stratus app stores each diagram's Mermaid source as a <strong>text attachment on the page</strong> (named per the macro's <em>filename</em> parameter), alongside a cached PNG. Your source code is yours, in your site, even though the app is frozen. No vendor server holds your data hostage.</p>
+
+  <h2>Option 1 — Automatic (one click)</h2>
+  <ol>
+    <li>Install Mermaid Diagrams Pro (free ≤10 users).</li>
+    <li>Go to <strong>Apps → Migrate to Mermaid Pro</strong>.</li>
+    <li>Click <strong>Scan site for Stratus diagrams</strong> — the tool finds every legacy macro, reads each diagram's source from its attachment, and shows a preview table.</li>
+    <li>Review, select, click <strong>Convert selected</strong>.</li>
+  </ol>
+  <p>Each affected page gets a new version with the diagram converted — source now stored in the page itself. <strong>Original page versions are preserved in history</strong>, so any page can be reverted. The Stratus attachments are left untouched; once you've verified everything renders, uninstall the legacy app.</p>
+  <div class="callout">Everything happens between your browser and Atlassian's APIs — no diagram ever leaves your site.</div>
+
+  <h2>Option 2 — Manual (if you only have a few)</h2>
+  <ol>
+    <li>On each page, open the attachments and download the text file — that's your Mermaid source.</li>
+    <li>Insert a <strong>Mermaid Diagram (Pro)</strong> macro (<code>/mermaid</code>).</li>
+    <li>Paste the source, Save. Delete the old macro.</li>
+  </ol>
+  <p>Tedious beyond ~10 diagrams — which is why we built Option 1.</p>
+
+  <h2>After migrating, you also get</h2>
+  <ul>
+    <li>Dark-mode aware rendering — diagrams follow each reader's theme</li>
+    <li>Zoom &amp; fullscreen on every diagram, plus SVG/PNG export</li>
+    <li>Live-preview editor with starter templates</li>
+    <li>Current mermaid.js — new diagram types as the language evolves</li>
+    <li><strong>Runs on Atlassian</strong> — zero egress, data-residency friendly</li>
+  </ul>
+
+  <h2>FAQ</h2>
+  <p><strong>Will my page history survive?</strong> Yes — conversion creates a normal new page version; everything before it is intact.</p>
+  <p><strong>What if a diagram fails to convert?</strong> The tool marks it and moves on; nothing on that page is changed.</p>
+  <p><strong>Do I need to be an admin?</strong> Site admin is recommended — the tool operates with your permissions.</p>
+  <p><strong>Can I test on one page first?</strong> Yes — scan, then convert only that page's diagrams.</p>
+
+  <a class="cta" href="#" id="mp-link">Install Mermaid Diagrams Pro →</a>
+</div>
+</body>
+</html>

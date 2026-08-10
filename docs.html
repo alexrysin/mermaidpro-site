@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentation — Mermaid Diagrams Pro</title>
+<meta name="description" content="How to create, view and migrate Mermaid diagrams in Confluence with Mermaid Diagrams Pro.">
+<style>
+  :root { --ink:#172B4D; --muted:#6B778C; --accent:#0C66E4; --bg:#FFFFFF; --card:#F7F8FA; --border:#DFE1E6; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#B6C2CF; --muted:#8C9BAB; --accent:#579DFF; --bg:#161A1D; --card:#22272B; --border:#38414A; } }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); line-height:1.7; }
+  .wrap { max-width:760px; margin:0 auto; padding:24px; }
+  nav a { color:var(--accent); text-decoration:none; font-weight:600; }
+  h1 { font-size:2rem; margin:24px 0 24px; letter-spacing:-.01em; }
+  h2 { font-size:1.35rem; margin:32px 0 12px; }
+  h3 { font-size:1.05rem; margin:20px 0 8px; }
+  p, li { font-size:1rem; margin-bottom:10px; }
+  ol, ul { padding-left:24px; margin-bottom:14px; }
+  code { background:var(--card); border:1px solid var(--border); border-radius:4px; padding:1px 6px; font-size:.9em; }
+  .callout { background:var(--card); border:1px solid var(--border); border-left:4px solid var(--accent); border-radius:8px; padding:14px 18px; margin:16px 0; }
+  a { color:var(--accent); }
+  .toc { background:var(--card); border-radius:10px; padding:16px 22px; margin-bottom:8px; }
+  .toc a { display:block; padding:3px 0; text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a href="/">← Mermaid Diagrams Pro</a></nav>
+  <h1>Documentation</h1>
+
+  <div class="toc">
+    <a href="#start">Getting started</a>
+    <a href="#types">Supported diagram types</a>
+    <a href="#viewing">Viewing features</a>
+    <a href="#migrate">Migrating from the legacy Stratus app</a>
+    <a href="#security">Data &amp; security</a>
+    <a href="#faq">FAQ</a>
+  </div>
+
+  <h2 id="start">Getting started</h2>
+  <ol>
+    <li>In any Confluence page, type <code>/mermaid</code> and choose <strong>Mermaid Diagram (Pro)</strong>.</li>
+    <li>The editor opens: write Mermaid code on the left, watch the live preview on the right.</li>
+    <li>New to Mermaid? Click any starter template — Flowchart, Sequence, Gantt, ER, Mindmap, Pie.</li>
+    <li>Click <strong>Save diagram</strong>, then publish your page.</li>
+  </ol>
+
+  <h2 id="types">Supported diagram types</h2>
+  <p>Everything mermaid.js supports: flowcharts, sequence diagrams, class diagrams, state diagrams, ER diagrams, Gantt charts, pie charts, mindmaps, timelines, user journeys, git graphs, quadrant charts and more. See the <a href="https://mermaid.js.org/intro/">Mermaid syntax reference</a> for the full language.</p>
+
+  <h2 id="viewing">Viewing features</h2>
+  <ul>
+    <li><strong>Zoom &amp; fullscreen</strong> — hover over any diagram to reveal the toolbar: zoom in/out, reset, fullscreen.</li>
+    <li><strong>Export</strong> — download any diagram as SVG or retina-quality PNG from the same toolbar.</li>
+    <li><strong>Dark mode</strong> — diagrams automatically follow each reader's Confluence theme, re-rendering instantly on switch.</li>
+    <li><strong>Errors</strong> — a clear message with the error text instead of a broken page.</li>
+  </ul>
+
+  <h2 id="migrate">Migrating from the legacy Stratus app</h2>
+  <p>If your site used the Connect-era "Mermaid Diagrams for Confluence" app:</p>
+  <ol>
+    <li>Go to <strong>Apps → Migrate to Mermaid Pro</strong> (site admin recommended).</li>
+    <li>Click <strong>Scan site for Stratus diagrams</strong>. The tool finds every legacy diagram and shows a preview of each.</li>
+    <li>Select the diagrams you want (all selected by default) and click <strong>Convert selected</strong>.</li>
+    <li>Each affected page gets a new version with the diagram converted. <strong>Original page versions are preserved in page history.</strong></li>
+  </ol>
+  <div class="callout">The tool reads the legacy app's diagram source from page attachments — nothing is sent outside your site. The legacy attachments are left untouched; uninstall the old app after verifying the conversion. Full guide: <a href="/migrate.html">Migrating from Stratus</a>.</div>
+
+  <h2 id="security">Data &amp; security</h2>
+  <ul>
+    <li>Diagram source is stored in your pages (macro configuration). It never leaves Atlassian's infrastructure.</li>
+    <li>The app is <strong>Runs on Atlassian</strong>: no external servers, no egress, compatible with data residency.</li>
+  </ul>
+
+  <h2 id="faq">FAQ</h2>
+  <p><strong>Where is my diagram code stored?</strong> Inside the page itself, as macro configuration. It's included in page exports, copies, and history.</p>
+  <p><strong>Does the app work with Confluence Data Center?</strong> No — this app is built on Forge for Confluence Cloud.</p>
+  <p><strong>What happens if I uninstall?</strong> Your diagram code remains in your pages' macro data. Reinstall the app and diagrams render again.</p>
+  <p><strong>How many diagrams can I create?</strong> Unlimited, on every plan.</p>
+
+  <h2>Support</h2>
+  <p>Found a bug or missing a feature? <a href="https://rysin-apps.atlassian.net/servicedesk/customer/portal/1">Open a support request</a> — we respond within one business day. Or email <a href="mailto:support@mermaidpro.app">support@mermaidpro.app</a>.</p>
+</div>
+</body>
+</html>

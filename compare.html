@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Best Mermaid Apps for Confluence in 2026 — An Honest Comparison</title>
+<meta name="description" content="Comparing every Mermaid diagram app for Confluence Cloud in 2026: Atlassian Labs, Mermaid Chart, Stratus, and Mermaid Diagrams Pro — prices, dark mode, zoom, maintenance status.">
+<style>
+  :root { --ink:#172B4D; --muted:#6B778C; --accent:#0C66E4; --bg:#FFFFFF; --card:#F7F8FA; --border:#DFE1E6; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#B6C2CF; --muted:#8C9BAB; --accent:#579DFF; --bg:#161A1D; --card:#22272B; --border:#38414A; } }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); line-height:1.7; }
+  .wrap { max-width:820px; margin:0 auto; padding:24px; }
+  nav a { color:var(--accent); text-decoration:none; font-weight:600; }
+  h1 { font-size:1.9rem; margin:24px 0 18px; letter-spacing:-.01em; line-height:1.25; }
+  h2 { font-size:1.35rem; margin:32px 0 12px; }
+  h3 { font-size:1.1rem; margin:22px 0 8px; }
+  p, li { font-size:1rem; margin-bottom:10px; }
+  ul { padding-left:24px; margin-bottom:14px; }
+  .tbl { overflow-x:auto; margin:18px 0; }
+  table { border-collapse:collapse; width:100%; font-size:.9rem; }
+  th, td { border:1px solid var(--border); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--card); }
+  .us { background:var(--card); font-weight:600; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a href="/">← Mermaid Diagrams Pro</a></nav>
+  <h1>The Best Mermaid Apps for Confluence in 2026 — An Honest Comparison</h1>
+
+  <p>Confluence doesn't support Mermaid natively — the code block macro will syntax-highlight your Mermaid, but it won't render it. You need a marketplace app, and there are more than a dozen. Here's an honest comparison of the options that matter, including where each one falls short.</p>
+
+  <h2>TL;DR</h2>
+  <div class="tbl">
+  <table>
+    <tr><th>App</th><th>Price</th><th>Best for</th><th>Watch out for</th></tr>
+    <tr class="us"><td>Mermaid Diagrams Pro (this site)</td><td>Free ≤10 users, then $0.35/u/mo</td><td>Teams that want dark mode, zoom &amp; migration</td><td>New app (2026) — smaller review history</td></tr>
+    <tr><td>Mermaid diagrams viewer (Atlassian Labs)</td><td>Free</td><td>Casual/occasional use</td><td>2.9★ — slow rendering, auto-detect misses, no support</td></tr>
+    <tr><td>Mermaid Chart for Confluence (official)</td><td>Free install, paid Mermaid SaaS</td><td>Teams already on Mermaid Chart cloud</td><td>3.0★ — small renders, no zoom, white-box dark mode</td></tr>
+    <tr><td>Mermaid Diagrams for Confluence (Stratus)</td><td>$0.40/u/mo</td><td>—</td><td>Frozen since Sept 2025; unfixed critical bugs in reviews</td></tr>
+    <tr><td>PlantUML+Mermaid multi-format apps</td><td>~$0.25/u/mo</td><td>Mixed-format teams</td><td>Jack-of-all-trades UX</td></tr>
+    <tr><td>draw.io</td><td>~$1.95/u/mo</td><td>Visual (drag-drop) diagramming</td><td>Mermaid is an import, not a first-class citizen</td></tr>
+  </table>
+  </div>
+
+  <h2>What actually matters when choosing</h2>
+  <h3>1. Where does your diagram code live?</h3>
+  <p>Some apps store your source on the vendor's servers; some in page attachments; the best store it in the page itself. If the vendor disappears (it happens — the Connect-era app freeze of 2025-2026 orphaned several), you want your source in your pages. Mermaid Diagrams Pro stores source as macro data inside the page: it's in your exports, your page history, your copies.</p>
+  <h3>2. Does it follow Confluence's dark mode?</h3>
+  <p>The single most common complaint in this category's reviews: white diagram boxes on dark pages. Test it: switch your Confluence theme and watch whether the diagram re-renders. (Ours does, instantly, without a refresh.)</p>
+  <h3>3. Can readers actually read large diagrams?</h3>
+  <p>Zoom and fullscreen sound trivial until you publish a 40-node flowchart. The official Mermaid Chart app's most-repeated review complaint is diagrams rendering tiny with no way to zoom.</p>
+  <h3>4. Is the app actively maintained?</h3>
+  <p>Check the listing's version history. The legacy Stratus app — long the category leader — hasn't shipped a release since September 2025, and its recent reviews report critical errors with no vendor response. Mermaid evolves fast; a frozen app falls behind the language itself.</p>
+  <h3>5. Where does rendering happen?</h3>
+  <p>Apps with the <strong>Runs on Atlassian</strong> badge render entirely inside Atlassian's infrastructure — no external servers see your diagram code. If your security team reviews vendors, this badge shortens that conversation considerably.</p>
+
+  <h2>Our honest take on each</h2>
+  <p><strong>Atlassian Labs viewer</strong> — free and fine for an occasional diagram in a code block. It's an unsupported Labs experiment: rendering is slow on big pages, auto-detection misses code blocks, and there's nobody to email when it breaks.</p>
+  <p><strong>Mermaid Chart (official)</strong> — made by the company behind mermaid.js, and best if your team already lives in their SaaS editor. As a Confluence experience it disappoints: reviews consistently cite small fixed-size renders, missing zoom, and broken dark mode.</p>
+  <p><strong>Stratus Mermaid Diagrams</strong> — was the category standard for years and stores source in attachments (good!). But it's been frozen for a year, sits on the deprecated Connect platform, and unresolved bugs are piling up in reviews. If you're on it, plan your exit — see our <a href="/migrate.html">migration guide</a>.</p>
+  <p><strong>Mermaid Diagrams Pro</strong> — we built it around this list: source in the page, instant dark-mode, zoom/fullscreen and SVG/PNG export on every diagram, live-preview editor, friendly errors, Runs on Atlassian, and a one-click importer from the Stratus app. We're the newest entrant, which means fewer reviews than incumbents — and it means your feature requests actually get built.</p>
+
+  <p><em>Try any of these free — most offer trials or free tiers. If you're comparing for a team, test the three questions above: dark mode, zoom, and where your code lives.</em></p>
+</div>
+</body>
+</html>
